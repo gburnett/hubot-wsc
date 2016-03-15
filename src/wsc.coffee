@@ -41,7 +41,7 @@ module.exports = (robot) ->
 
     msg.send "**#{question.question}**"
 
-  robot.respond /wsc a ([1-9]$|[1-9]\d$|10[0-7]$)/igm, (msg) ->
+  robot.respond /wsc a ([1-9]$|[1-9]\d$|10[0-7]$)/im, (msg) ->
     questions = wscQuestions()
     question = findByNumber(questions, msg.match[1])
 

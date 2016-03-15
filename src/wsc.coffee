@@ -35,19 +35,19 @@ module.exports = (robot) ->
 
     sendChunks(msg, chunkedQuestions)
 
-  robot.respond /wsc q ([1-9]$|^[1-9]\d$|^10[0-7])/im, (msg) ->
+  robot.respond /wsc q ([1-9]$|[1-9]\d$|10[0-7]$)/im, (msg) ->
     questions = wscQuestions()
     question = findByNumber(questions, msg.match[1])
 
     msg.send "**#{question.question}**"
 
-  robot.respond /wsc a ([1-9]$|^[1-9]\d$|^10[0-7])/im, (msg) ->
+  robot.respond /wsc a ([1-9]$|[1-9]\d$|10[0-7]$)/igm, (msg) ->
     questions = wscQuestions()
     question = findByNumber(questions, msg.match[1])
 
     msg.send "#{question.answer}"
 
-  robot.respond /wsc qa ([1-9]$|^[1-9]\d$|^10[0-7])/im, (msg) ->
+  robot.respond /wsc qa ([1-9]$|[1-9]\d$|10[0-7]$)/im, (msg) ->
     questions = wscQuestions()
     question = findByNumber(questions, msg.match[1])
 
@@ -57,7 +57,7 @@ module.exports = (robot) ->
     #{question.answer}
     """
 
-  robot.respond /wsc proof ([1-9]$|^[1-9]\d$|^10[0-7])/im, (msg) ->
+  robot.respond /wsc proof ([1-9]$|[1-9]\d$|10[0-7]$)/im, (msg) ->
     questions = wscQuestions()
     q = findByNumber(questions, msg.match[1])
     proofs = q.proofTexts
@@ -76,7 +76,7 @@ module.exports = (robot) ->
 
     msg.send proof
 
-  robot.respond /wsc full ([1-9]$|^[1-9]\d$|^10[0-7])/im, (msg) ->
+  robot.respond /wsc full ([1-9]$|[1-9]\d$|10[0-7]$)/im, (msg) ->
     number = msg.match[1]
     qa = getQuestionAndAnswer(number)
     proofs = getQuestionProofs(number)

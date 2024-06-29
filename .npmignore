@@ -1,0 +1,7 @@
+# Exclude everything by default
+*
+
+# Include specific files and directories
+!dist
+!README.md
+!LICENSE

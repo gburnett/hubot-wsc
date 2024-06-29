@@ -1,15 +1,38 @@
 {
-  "name": "hubot-wsc",
-  "version": "1.0.0",
-  "description": "A Hubot script to get the answers to questions in the WSC",
-  "main": "index.js",
+  "name": "@gburnett/wsc-questions",
+  "version": "0.1.0",
+  "description": "Westminster shorter catechism questions",
+  "type": "module",
+  "source": "src/wsc-questions.ts",
+  "exports": {
+    "require": "./dist/wsc-questions.cjs",
+    "default": "./dist/wsc-questions.modern.cjs"
+  },
+  "main": "dist/wsc-questions.cjs",
+  "module": "dist/wsc-questions.module.js",
+  "unpkg": "dist/wsc-questions.umd.js",
+  "types": "dist/wsc-questions.d.ts",
   "scripts": {
+    "build": "microbundle",
+    "dev": "microbundle watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "gburnett",
   "license": "ISC",
-  "dependencies": {
-    "coffee-script": "^1.10.0"
-  }
+  "devDependencies": {
+    "microbundle": "^0.15.1",
+    "prettier": "^3.3.2",
+    "typescript": "^5.5.2"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE.txt"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gburnett/hubot-wsc.git"
+  },
+  "homepage": "https://github.com/gburnett/hubot-wsc"
 }

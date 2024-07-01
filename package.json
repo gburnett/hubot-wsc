@@ -1,6 +1,6 @@
 {
   "name": "@gburnett/wsc-questions",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Westminster shorter catechism questions",
   "type": "module",
   "source": "src/wsc-questions.ts",

@@ -6,12 +6,12 @@
   "source": "src/wsc-questions.ts",
   "exports": {
     "require": "./dist/wsc-questions.cjs",
-    "default": "./dist/wsc-questions.modern.cjs"
+    "default": "./dist/wsc-questions.modern.js"
   },
-  "main": "dist/wsc-questions.cjs",
-  "module": "dist/wsc-questions.module.js",
-  "unpkg": "dist/wsc-questions.umd.js",
-  "types": "dist/wsc-questions.d.ts",
+  "main": "./dist/wsc-questions.cjs",
+  "module": "./dist/wsc-questions.module.js",
+  "unpkg": "./dist/wsc-questions.umd.js",
+  "types": "./dist/wsc-questions.d.ts",
   "scripts": {
     "build": "microbundle",
     "dev": "microbundle watch",
